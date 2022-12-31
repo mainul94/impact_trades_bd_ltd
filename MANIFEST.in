@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include impact_trades_bd_ltd *.css
+recursive-include impact_trades_bd_ltd *.csv
+recursive-include impact_trades_bd_ltd *.html
+recursive-include impact_trades_bd_ltd *.ico
+recursive-include impact_trades_bd_ltd *.js
+recursive-include impact_trades_bd_ltd *.json
+recursive-include impact_trades_bd_ltd *.md
+recursive-include impact_trades_bd_ltd *.png
+recursive-include impact_trades_bd_ltd *.py
+recursive-include impact_trades_bd_ltd *.svg
+recursive-include impact_trades_bd_ltd *.txt
+recursive-exclude impact_trades_bd_ltd *.pyc
