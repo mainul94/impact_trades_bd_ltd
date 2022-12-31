@@ -1,0 +1,27 @@
+{
+ "attach_print": 0,
+ "channel": "SMS",
+ "condition": "doc.mobile_no",
+ "creation": "2023-01-01 00:49:40.758169",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Sales Invoice",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Dear Customer - {{ doc.customer_name }},\nTk {{ doc.get_formatted('grand_total') }} Your Product Bill No = {{ doc.name }} Balance Tk {{ frappe.format(company_wise_party_balance(doc.company, \"Customer\", doc.customer), \"Currency\") }}\nHelp:01958444700\n{{ doc.company }}",
+ "modified": "2023-01-01 00:49:40.758169",
+ "modified_by": "Administrator",
+ "module": "IMPACT TRADES BD LTD",
+ "name": "New Sales Invoice",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "mobile_no"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0
+}

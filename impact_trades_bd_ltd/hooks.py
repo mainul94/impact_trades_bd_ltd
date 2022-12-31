@@ -192,3 +192,17 @@ jenv = {
 		"company_wise_party_balance:impact_trades_bd_ltd.jinja.company_wise_party_balance"
 	]
 }
+
+fixtures = [
+	{
+		"dt": "Custom Field",
+		"filters": [["name", "in", [
+			"Purchase Invoice-email_id",
+			"Purchase Invoice-mobile_no",
+			"Payment Entry-email_id",
+			"Payment Entry-mobile_no",
+			"Sales Invoice-email_id",
+			"Sales Invoice-mobile_no"
+		]]]
+	}
+]
