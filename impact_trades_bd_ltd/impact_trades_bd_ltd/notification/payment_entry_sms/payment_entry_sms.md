@@ -1,0 +1,10 @@
+Dear {{ party_type }} - {{ doc.party_name }}
+{%  if doc.payment_type=="Receive" %}
+Tk {{ doc.get_formatted("paid_amount") }} has been Deposited to ={{ doc.paid_to }}.
+{% else %}
+Tk{{ doc.get_formatted("paid_amount") }}Payment Deposited  Reference No= {{ doc.reference_no }}   Reference Date= {{ frappe.format_date(doc.reference_date) }}
+{% endif %}
+Balance Tk {{ frappe.format(get_compnay_wise_party_blance(doc.company, doc.party_type, doc.party), "Currency") }}
+Help:01958444700
+{{ doc.company }}
+

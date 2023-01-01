@@ -1,0 +1,30 @@
+{
+ "attach_print": 1,
+ "channel": "Email",
+ "condition": "doc.email_id",
+ "creation": "2023-01-01 14:09:00.805516",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Purchase Invoice",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Dear Supplier - {{ doc.supplier_name }}\nTk {{ doc.get_formatted('grand_total') }} Product Bill No = {{ doc.name }} Balance Tk {{ frappe.format(company_wise_party_balance(doc.compnay, \"Supplier\", doc.supplier), \"Currency\") }}\nHelp:01958444702\n{{ doc.company }}",
+ "modified": "2023-01-01 14:09:00.805516",
+ "modified_by": "Administrator",
+ "module": "IMPACT TRADES BD LTD",
+ "name": "New Purchase Invoice Email",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "email_id"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "sender": "",
+ "sender_email": "",
+ "subject": "New Purchase Confirmation {{ doc.bill_no or doc.name }} from {{ doc.company }}"
+}

@@ -1,0 +1,28 @@
+{
+ "attach_print": 1,
+ "channel": "Email",
+ "condition": "doc.payment_type in (\"Recieve\", \"Pay\") and doc.email_id",
+ "creation": "2023-01-01 14:23:08.111535",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Payment Entry",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Dear {{ party_type }} - {{ doc.party_name }}\n{%  if doc.payment_type==\"Receive\" %}\nTk {{ doc.get_formatted(\"paid_amount\") }} has been Deposited to ={{ doc.paid_to }}.\n{% else %}\nTk{{ doc.get_formatted(\"paid_amount\") }}Payment Deposited  Reference No= {{ doc.reference_no }}   Reference Date= {{ frappe.format_date(doc.reference_date) }}\n{% endif %}\nBalance Tk {{ frappe.format(get_compnay_wise_party_blance(doc.company, doc.party_type, doc.party), \"Currency\") }}\nHelp:01958444700\n{{ doc.company }}\n\n",
+ "modified": "2023-01-01 14:23:08.111535",
+ "modified_by": "Administrator",
+ "module": "IMPACT TRADES BD LTD",
+ "name": "Payment Entry Email",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "email_id"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Payment Confirmation ref#{{ doc.name }}"
+}
