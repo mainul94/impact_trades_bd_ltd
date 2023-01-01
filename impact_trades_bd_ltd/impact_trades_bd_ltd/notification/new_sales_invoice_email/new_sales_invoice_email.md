@@ -1,4 +1,0 @@
-Dear Customer - {{ doc.customer_name }},
-Tk {{ doc.get_formatted('grand_total') }} Your Product Bill No = {{ doc.name }} Balance Tk {{ frappe.fomat( company_wise_party_balance(doc.company, "Customer", doc.customer), "Currency") }}
-Help:01958444700
-{{ doc.company }}

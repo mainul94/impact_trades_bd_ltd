@@ -1,0 +1,6 @@
+<p>
+    Dear Customer - {{ doc.customer_name }},<br>
+    Tk {{ doc.get_formatted('grand_total') }} Your Product Bill No = {{ doc.name }} Balance Tk {{ frappe.format(company_wise_party_balance(doc.company, "Customer", doc.customer), "Currency") }} <br>
+    Help:01958444700 </br>
+    {{ doc.company }}
+</p>
