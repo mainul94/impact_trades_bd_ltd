@@ -1,4 +1,5 @@
 import frappe
+from frappe.utils import flt
 
 
 def company_wise_party_balance(company, party_type, party):
@@ -12,4 +13,4 @@ def company_wise_party_balance(company, party_type, party):
     )
     if not company_wise_total_unpaid:
         return 0
-    return -1 * company_wise_total_unpaid[0][0] if party_type == "Supplier" else company_wise_total_unpaid[0][0]
+    return -1 * flt(company_wise_total_unpaid[0][0]) if party_type == "Supplier" else company_wise_total_unpaid[0][0]
