@@ -187,10 +187,8 @@ app_license = "MIT"
 # For example: Role, Gender, etc.
 # translated_search_doctypes = []
 
-jenv = {
-	'methods': [
-		"company_wise_party_balance:impact_trades_bd_ltd.jinja.company_wise_party_balance"
-	]
+jinja = {
+	"methods": "impact_trades_bd_ltd.jinja"
 }
 
 fixtures = [
